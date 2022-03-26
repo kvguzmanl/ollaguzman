@@ -14,7 +14,7 @@ class AreaController extends Controller
      */
     public function index()
     {
-        //
+        return view('area')->with('tipo_recurso', 'Controlador de recurso');
     }
 
     /**

@@ -22,6 +22,11 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        Schema::table('users', function($table){
+            $table->string('comentarios', 500)->nullable();
+            $table->integer('edad')->nullable();
+        });
     }
 
     /**
@@ -31,6 +36,7 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
+
         Schema::dropIfExists('users');
     }
 }
