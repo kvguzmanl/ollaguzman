@@ -13,9 +13,12 @@ class CreateAreasTable extends Migration
      */
     public function up()
     {
-        Schema::create('areas', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('area', function (Blueprint $table) {
+            $table->increments('codigoArea');
+            $table->string('nombre', 50);
+            $table->string('telefono', 20);
+            $table->integer('codigoSucursal')->unsigned();
+            $table->foreign('codigoSucursal')->references('codigoSucursal')->on('sucursal');
         });
     }
 
@@ -26,6 +29,6 @@ class CreateAreasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('areas');
+        Schema::dropIfExists('area');
     }
 }

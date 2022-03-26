@@ -13,9 +13,13 @@ class CreateEmpleadosTable extends Migration
      */
     public function up()
     {
-        Schema::create('empleados', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('empleado', function (Blueprint $table) {
+            $table->increments('codigoEmpleado');
+            $table->string('nombre', 50);
+            $table->integer('edad');
+            $table->double('sueldoBase');
+            $table->integer('codigoArea')->unsigned();
+            $table->foreign('codigoArea')->references('codigoArea')->on('area');
         });
     }
 
@@ -26,6 +30,6 @@ class CreateEmpleadosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('empleados');
+        Schema::dropIfExists('empleado');
     }
 }
