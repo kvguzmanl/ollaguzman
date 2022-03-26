@@ -24,7 +24,6 @@ class CreateUsersTable extends Migration
         });
 
         Schema::table('users', function($table){
-            $table->string('pais', 200);
             $table->string('comentarios', 500);
             $table->integer('edad');
         });
@@ -37,6 +36,7 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
+
         Schema::dropIfExists('users');
     }
 }
