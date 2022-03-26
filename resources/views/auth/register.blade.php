@@ -38,7 +38,7 @@
                                 @enderror
                             </div>
                         </div>
-
+                    <!--
                         <div class="row mb-3">
                             <label for="codigoPais" class="col-md-4 col-form-label text-md-end">{{ __('Pais') }}</label>
 
@@ -71,7 +71,7 @@
                             <label for="edad" class="col-md-4 col-form-label text-md-end">{{ __('Edad') }}</label>
 
                             <div class="col-md-6">
-                                <input id="edad" type="text" class="form-control @error('edad') is-invalid @enderror" name="edad" value="{{ old('edad') }}" required autocomplete="edad">
+                                <input id="edad" type="number" class="form-control @error('edad') is-invalid @enderror" name="edad" value="{{ old('edad') }}" required autocomplete="edad">
 
                                 @error('edad')
                                     <span class="invalid-feedback" role="alert">
@@ -80,6 +80,7 @@
                                 @enderror
                             </div>
                         </div>
+                    -->
 
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
