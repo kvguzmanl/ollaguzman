@@ -19,7 +19,7 @@ class CreatePaisTable extends Migration
         });
 
         Schema::table('users', function($table){
-            $table->integer('codigoPais')->unsigned();
+            $table->integer('codigoPais')->unsigned()->nullable();
             $table->foreign('codigoPais')->references('codigoPais')->on('pais');
         });
     }

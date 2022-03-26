@@ -24,8 +24,8 @@ class CreateUsersTable extends Migration
         });
 
         Schema::table('users', function($table){
-            $table->string('comentarios', 500);
-            $table->integer('edad');
+            $table->string('comentarios', 500)->nullable();
+            $table->integer('edad')->nullable();
         });
     }
 
