@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-6 mt-5">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header bg-primary"><span class="text-white">{{ __('Login') }}</span></div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -32,7 +32,7 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col-md-12 offset-md-4">
+                            <div class="col-md-12">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                     <label class="form-check-label" for="remember">
@@ -41,9 +41,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row mb-0">
-                            <div class="col-md-12 offset-md-4">
-                                <button type="submit" class="btn btn-primary btn-block">
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-success w-100">
                                     {{ __('Login') }}
                                 </button>
                             </div>
