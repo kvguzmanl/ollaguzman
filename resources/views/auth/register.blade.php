@@ -40,6 +40,48 @@
                         </div>
 
                         <div class="row mb-3">
+                            <label for="codigoPais" class="col-md-4 col-form-label text-md-end">{{ __('Pais') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="codigoPais" type="text" class="form-control @error('codigoPais') is-invalid @enderror" name="codigoPais" value="{{ old('codigoPais') }}" required autocomplete="codigoPais">
+
+                                @error('codigoPais')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="comentarios" class="col-md-4 col-form-label text-md-end">{{ __('Comentarios') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="comentarios" type="text" class="form-control @error('comentarios') is-invalid @enderror" name="comentarios" value="{{ old('comentarios') }}" required autocomplete="comentarios">
+
+                                @error('comentarios')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="edad" class="col-md-4 col-form-label text-md-end">{{ __('Edad') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="edad" type="text" class="form-control @error('edad') is-invalid @enderror" name="edad" value="{{ old('edad') }}" required autocomplete="edad">
+
+                                @error('edad')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
