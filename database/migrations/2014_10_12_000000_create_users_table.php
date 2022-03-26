@@ -22,6 +22,12 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        Schema::table('users', function($table){
+            $table->string('pais', 200);
+            $table->string('comentarios', 500);
+            $table->integer('edad');
+        });
     }
 
     /**

@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AreaController;
+use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\SucursalController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Controlador de recurso para area
+Route::get('/area', [AreaController::class, "index"]);
+
+//Controlador de recurso para sucursal
+Route::get('/sucursal', [SucursalController::class, "index"]);
